@@ -20,7 +20,7 @@ namespace forum.Services {
     }
 
     constructor($resource:ng.resource.IResourceService){
-      this.ToDoResource = $resource('todo2/:id');
+      this.ToDoResource = $resource('/todo2/:id');
     }
   }
 

@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
 // Get a single item by id
 router.get('/:id', (req, res) => {
-  MyToDo.findById(req.param['id']).then((item) => {
+  MyToDo.findById(req.params['id']).then((item) => {
     res.json(item);
   });
 });
@@ -42,9 +42,10 @@ router.post('/',(req, res) => {
 
 router.post('/:id', (req, res) => {
     let listId = req.params.id;
-
+    console.log("List Id:",listId);
     MyToDo.findById(listId).then((item) => {
         item.name = req.body.name;
+        console.log("Item's name", item.name);
         item.description = req.body.description;
 
         // save upadate item

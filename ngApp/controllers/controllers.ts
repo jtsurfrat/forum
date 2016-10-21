@@ -30,9 +30,9 @@ namespace forum.Controllers {
       public item;
 
       public save(){
-        // console.log ('--------- here');
-        // console.log ('--------- here: ', this.name);
-        // console.log ('--------- here: ', this.item.name);
+        console.log ('--------- here');
+        //console.log ('--------- here: ', this.name);
+        console.log ('--------- here: ', this.item.name);
 
           // this.toDoListService.save({name: 'bob', description: 'test simple description'}).then(() => {
           this.toDoListService.save(this.item).then(() => {
