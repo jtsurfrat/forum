@@ -59,16 +59,16 @@ router.post('/:id', (req, res) => {
     });
 });
 
-// router.delete('/:id', (req, res) => {
-//   let itemId = req.params['id'];
-//
-//   MyToDo.remove({_id:itemId}).then(() => {
-//     res.sendStatus(200);
-//   }).catch((err) => {
-//     res.status(500);
-//     console.log(err);
-//   })
-// });
+router.delete('/:id', (req, res) => {
+  let itemId = req.params['id'];
+
+  MyToDo.remove({_id:itemId}).then(() => {
+    res.sendStatus(200);
+  }).catch((err) => {
+    res.status(500);
+    console.log(err);
+  })
+});
 
 
 

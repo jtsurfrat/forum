@@ -12,13 +12,13 @@ namespace forum.Controllers {
         console.error(err);
       })
     }
-    // public remove(itemId){
-    //   this.toDoListService.remove(itemId).then(() => {
-    //     this.items = this.toDoListService.list();
-    //   }).catch((err) => {
-    //     console.error(err);
-    //   })
-    // }
+    public remove(itemId){
+      this.toDoListService.remove(itemId).then(() => {
+        this.items = this.toDoListService.list();
+      }).catch((err) => {
+        console.error(err);
+      })
+    }
 
     constructor(private toDoListService: forum.Services.ToDoListService){
       this.items = this.toDoListService.list();
@@ -26,7 +26,7 @@ namespace forum.Controllers {
   }
 
   export class EditToDoListController {
-      public list;
+      //public list;
       public item;
 
       public save(){

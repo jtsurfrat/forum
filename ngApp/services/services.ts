@@ -15,9 +15,9 @@ namespace forum.Services {
       return this.ToDoResource.save({id:item._id}, item).$promise;
     }
 
-    // public remove(itemId){
-    //   return this.ToDoResource.remove({id:itemId}).$promise
-    // }
+    public remove(itemId){
+      return this.ToDoResource.remove({id:itemId}).$promise
+    }
 
     constructor($resource:ng.resource.IResourceService){
       this.ToDoResource = $resource('todo2/:id');
